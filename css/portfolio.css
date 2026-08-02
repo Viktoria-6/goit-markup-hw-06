@@ -1,6 +1,11 @@
 .portfolio {
   padding: 96px 0;
 }
+@media screen and (min-width: 1158px) {
+  .portfolio {
+    padding: 120px 0;
+  }
+}
 .portfolio-title {
   margin-bottom: 72px;
 }
