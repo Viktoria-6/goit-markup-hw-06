@@ -5,7 +5,6 @@
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
-
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -30,42 +29,44 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: #404bbf;
+  fill: #f4f4fd;
 }
-.modal-btn:hover .modal-btn-icon,
-.modal-btn:focus .modal-btn-icon {
-  fill: #fff;
-}
-.modal-btn-icon {
-  fill: #2e2f42;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  max-width: 408px;
-  width: 100%;
-  min-height: 584px;
+  width: 288px;
+  min-height: 619px;
   border-radius: 4px;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 16px 16px;
   box-shadow:
     0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
 }
-
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    min-height: 582px;
+    padding: 72px 24px 24px 24px;
+  }
+}
 .modal-caption {
   font-weight: 500;
   text-align: center;
   color: #2e2f42;
   margin-bottom: 16px;
+  text-align: center;
 }
 .modal-form-field {
   width: 100%;
@@ -74,7 +75,6 @@
 .modal-form-field:has(+ .modal-form-agreement) {
   margin-bottom: 16px;
 }
-
 .modal-form-label {
   display: block;
   margin-bottom: 4px;
@@ -116,7 +116,7 @@
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding-block: 8px;
-  padding-inline: 16px;
+  padding: 8px 16px;
   width: 100%;
   height: 120px;
   outline: none;
@@ -129,10 +129,47 @@
 .modal-form-comment::placeholder {
   color: rgba(46, 47, 66, 0.4);
 }
-.modal-form-comment:focus {
-  border-color: #4d5ae5;
+.modal-form-agreement {
+  margin-bottom: 24px;
 }
 
+.modal-form-agreement-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  cursor: pointer;
+  color: transparent;
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-agreement-icon {
+  fill: currentColor;
+}
+.checkbox:checked + .modal-form-agreement-wrap .modal-form-agreement-checkbox {
+  background-color: #404bbf;
+  border: 1px solid #404bbf;
+  color: #f4f4fd;
+}
+.modal-form-agreement-wrap {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+.modal-form-agreement-link {
+  line-height: 1.3;
+  text-decoration: underline;
+  color: #4d5ae5;
+}
 .modal-form-btn {
   display: block;
   min-width: 169px;
@@ -152,52 +189,7 @@
 
   margin: 0 auto;
 }
-
 .modal-form-btn:hover,
 .modal-form-btn:focus {
   background-color: #404bbf;
-}
-
-.modal-form-agreement {
-  margin-bottom: 24px;
-}
-
-.modal-form-agreement-wrap {
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-}
-
-.modal-form-agreement-checkbox {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 8px;
-  width: 16px;
-  height: 16px;
-  border-radius: 2px;
-
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  cursor: pointer;
-  color: transparent;
-  transition:
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-form-agreement-icon {
-  fill: currentColor;
-}
-.checkbox:checked + .modal-form-agreement-wrap .modal-form-agreement-checkbox {
-  background-color: #404bbf;
-  border: 1px solid #404bbf;
-  color: #f4f4fd;
-}
-
-.modal-form-agreement-link {
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  text-decoration: underline;
-  color: #4d5ae5;
 }

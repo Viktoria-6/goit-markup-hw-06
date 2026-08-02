@@ -1,12 +1,10 @@
+.hide {
+  display: none;
+}
 body {
   font-family: 'Roboto', sans-serif;
   background: #fff;
   color: #434455;
-}
-.container {
-  max-width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px;
 }
 h1,
 h2,
@@ -18,7 +16,6 @@ h6 {
   margin: 0;
   padding: 0;
 }
-
 p {
   font-weight: 400;
   font-size: 16px;
@@ -39,6 +36,23 @@ a {
   margin: 0;
   padding: 0;
 }
+button {
+  font-family: inherit;
+  background-color: transparent;
+  font: inherit;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+input {
+  font-family: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -51,16 +65,18 @@ a {
   overflow: hidden;
   clip: rect(0 0 0 0);
 }
-
-button {
-  font-family: inherit;
-  background-color: transparent;
-  font: inherit;
-  color: inherit;
-  border: none;
-  padding: 0;
-  cursor: pointer;
+.container {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
-input {
-  font-family: inherit;
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
 }
