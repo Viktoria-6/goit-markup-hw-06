@@ -1,10 +1,13 @@
 .header {
   background: #fff;
-  padding: 0 16px;
+}
+.header-logo {
+  display: block;
+  padding: 16px 0;
 }
 @media screen and (min-width: 1158px) {
-  .header {
-    padding: 0 15px;
+  .header-logo {
+    padding: 24px 0;
   }
 }
 .header-container {
@@ -32,8 +35,6 @@
 @media screen and (min-width: 768px) {
   .header {
     border-bottom: 1px solid #e7e9fc;
-    padding: 0;
-    padding: 0 16px;
   }
 
   .header-nav {
