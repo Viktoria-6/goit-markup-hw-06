@@ -6,9 +6,6 @@
     padding: 120px 0;
   }
 }
-.portfolio-title {
-  margin-bottom: 72px;
-}
 .portfolio-list {
   display: flex;
   flex-direction: column;
@@ -80,6 +77,7 @@
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 72px;
 }
 .portfolio-caption {
   font-weight: 500;

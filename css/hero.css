@@ -3,28 +3,28 @@
   margin: 0 auto;
   padding: 72px 0;
   background: #2e2f42;
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(46, 47, 66, 0.7) 0%,
-      rgba(46, 47, 66, 0.7) 100%
-    ),
-    url('../images/hero-bgmob@1x.jpg');
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-.hero {
   background-image:
     linear-gradient(
       180deg,
       rgba(46, 47, 66, 0.7) 0%,
       rgba(46, 47, 66, 0.7) 100%
     ),
-    image-set(
-      url('../images/hero-bgmob@1x.jpg') 1x,
-      url('../images/hero-bgmob@2x.jpg') 2x
-    );
+    url('../images/hero-bgmob@2x.jpg');
+}
+@media (min-resolution: 2dppx) {
+  .hero {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(46, 47, 66, 0.7) 0%,
+        rgba(46, 47, 66, 0.7) 100%
+      ),
+      url('../images/hero-bgmob@2x.jpg');
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -37,14 +37,23 @@
         rgba(46, 47, 66, 0.7) 0%,
         rgba(46, 47, 66, 0.7) 100%
       ),
-      image-set(
-        url('../images/hero-bgtab@1x.jpg') 1x,
-        url('../images/hero-bgtab@2x.jpg') 2x
-      );
+      url('../images/hero-bgtab@1x.jpg');
+  }
+  @media (min-resolution: 2dppx) {
+    .hero {
+      background-image:
+        linear-gradient(
+          180deg,
+          rgba(46, 47, 66, 0.7) 0%,
+          rgba(46, 47, 66, 0.7) 100%
+        ),
+        url('../images/hero-bgtab@2x.jpg');
+    }
   }
 }
 @media screen and (min-width: 1158px) {
   .hero {
+    max-width: 1440px;
     padding: 188px 0;
     background-image:
       linear-gradient(
@@ -52,10 +61,18 @@
         rgba(46, 47, 66, 0.7) 0%,
         rgba(46, 47, 66, 0.7) 100%
       ),
-      image-set(
-        url('../images/hero-bgdesc@1x.jpg') 1x,
-        url('../images/hero-bgdesc@2x.jpg') 2x
-      );
+      url('../images/hero-bgdesc@1x.jpg');
+  }
+  @media (min-resolution: 2dppx) {
+    .hero {
+      background-image:
+        linear-gradient(
+          180deg,
+          rgba(46, 47, 66, 0.7) 0%,
+          rgba(46, 47, 66, 0.7) 100%
+        ),
+        url('../images/hero-bgdesc@2x.jpg');
+    }
   }
 }
 
@@ -73,6 +90,7 @@
   text-align: center;
   color: #fff;
   margin-bottom: 72px;
+  max-width: 216px;
 }
 @media screen and (min-width: 768px) {
   .hero-title {

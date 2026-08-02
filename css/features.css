@@ -10,7 +10,6 @@
 .features-wrapper {
   display: none;
 }
-
 @media screen and (min-width: 1158px) {
   .features-wrapper {
     display: flex;
@@ -24,7 +23,16 @@
     margin-bottom: 8px;
   }
 }
-
+.features-tittle {
+  display: block;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 72px;
+}
 .features-list {
   display: flex;
   flex-direction: column;
@@ -65,12 +73,23 @@
   color: #2e2f42;
   margin-bottom: 8px;
 }
+@media screen and (min-width: 768px) {
+  .features-caption {
+    text-align: left;
+  }
+}
 @media screen and (min-width: 1158px) {
   .features-caption {
     font-size: 20px;
     line-height: 1.2;
+    font-weight: 500;
   }
 }
-
-@media screen and (min-width: 768px) {
+.features-text {
+  font-weight: 500;
+}
+@media screen and (min-width: 1158px) {
+  .features-text {
+    font-weight: 400;
+  }
 }
