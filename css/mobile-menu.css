@@ -23,7 +23,7 @@
     display: none;
   }
 }
-.mobile-menu-container.is-open {
+.mobile-menu.is-open {
   transform: translateX(0);
   opacity: 1;
   visibility: visible;

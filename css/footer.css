@@ -11,7 +11,6 @@
   display: flex;
   flex-direction: column;
   gap: 72px;
-  padding: 0 108px;
 }
 @media screen and (min-width: 768px) {
   .footer-container {
@@ -19,6 +18,7 @@
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 72px;
+    padding: 0 108px;
   }
 }
 @media screen and (min-width: 1158px) {
